@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CurrencyConverterController">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="100.0" prefWidth="160.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="63.0" prefWidth="335.0" style="-fx-background-color: green;" text="Currency Convertor" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Bell MT" size="26.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="367.0" style="-fx-background-color: green;" text="Welcome" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <SplitPane orientation="VERTICAL" prefHeight="175.0" prefWidth="120.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="125.0" prefWidth="333.0">
+               <children>
+                  <ImageView cache="true" cacheHint="SPEED" fitHeight="224.0" fitWidth="342.0" layoutY="-19.0" mouseTransparent="true" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" style="-fx-image: 3;" AnchorPane.bottomAnchor="-32.33333333333334" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-3.3333333333333144" AnchorPane.topAnchor="-19.0">
+                     <image>
+                        <Image url="@Untitled-1.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Green;">
+         <children>
+            <ChoiceBox fx:id="currency1" layoutX="9.0" layoutY="65.0" onAction="#handleCurrency1ChoiceBoxAction" prefWidth="150.0" />
+            <ChoiceBox fx:id="currency2" layoutX="9.0" layoutY="144.0" onAction="#handleCurrency2ChoiceBoxAction" prefWidth="150.0" />
+            <TextField fx:id="amount1" layoutX="176.0" layoutY="65.0" onAction="#handleAmount1TextFieldAction" />
+            <TextField fx:id="amount2" layoutX="176.0" layoutY="144.0" />
+            <Button fx:id="convertButton" layoutX="139.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleConvertButtonAction" text="Convert" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </Pane>
+      <TextArea editable="false" focusTraversable="false" prefHeight="90.0" prefWidth="200.0" style="-fx-background-color: green; -fx-border-color: Silver;" text="Disclaimer: We do not guarantee the exchange rate due to market fluctuation and market vulnerability. This application is intended to provide an exchanged rate for select currencies based on market rates." wrapText="true">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </TextArea>
+   </children>
+</VBox>
